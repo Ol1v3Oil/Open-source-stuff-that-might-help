@@ -1,5 +1,6 @@
 'l,r = w'
 'o = u'
+'listing will make things better but ima do it after i learn it'
 StartE = 0
 def translate(E):
     for letter in E:
