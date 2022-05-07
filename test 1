@@ -1,0 +1,18 @@
+'l,r = w'
+'o = u'
+StartE = 0
+def translate(E):
+    for letter in E:
+        if letter in "rlo":
+            E = E.replace("r" ,"w")
+            E = E.replace("l", "w")
+            E = E.replace("oo", "owo")
+            E = E.replace("o", "wo")
+
+    return E
+
+StartE = 1
+while StartE == 1:
+    Sentence = input("type something: ")
+    Sentence = translate(Sentence)
+    print(Sentence)
