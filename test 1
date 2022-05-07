@@ -8,6 +8,7 @@ def translate(E):
             E = E.replace("l", "w")
             E = E.replace("oo", "owo")
             E = E.replace("o", "wo")
+            E = E.replace("ww","w")
 
     return E
 
@@ -16,3 +17,8 @@ while StartE == 1:
     Sentence = input("type something: ")
     Sentence = translate(Sentence)
     print(Sentence)
+
+#Results:
+#Never gonna give you up
+#=
+#Nevew gwonna give ywou up
