@@ -1,0 +1,22 @@
+#pull command list using input
+def process():
+  comlist = ['error','attack', 'defend', 'powerup','check']
+  wrd = input("Input command: ")
+  inp = wrd.split(" ")
+  inp[0] = inp[0].lower()
+  print(inp)
+  
+  if inp[0] == comlist[1]:
+    print("attack")
+    dec = comlist[1]
+  elif inp[0] == comlist[2]:
+    print("defend")
+    dec = comlist[2]
+  elif inp[0] == comlist[3]:
+    print("powerup")
+    dec = comlist[3]
+  elif inp[0] == comlist[4]:
+    check(inp[1])
+  else:
+    print(f"You can only do the following\n{comlist}")
+    dec = comlist[0]
