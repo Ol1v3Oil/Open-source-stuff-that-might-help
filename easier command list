@@ -1,4 +1,5 @@
 #pull command list using input
+#You have to manually put if and elif
 def process():
   comlist = ['error','attack', 'defend', 'powerup','check']
   wrd = input("Input command: ")
