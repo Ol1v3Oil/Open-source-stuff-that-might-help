@@ -1,4 +1,5 @@
 #read and separate file by \n and , 
+#for file in the same folder
 def read_file():
   f = open('file.txt', 'r')
   container = f.read().split('\n')
@@ -6,3 +7,9 @@ def read_file():
   for i in range(0,len(container)):
     container[i] = container[i].split(',')
  
+#for file in other folder
+  with open('file.txt', 'r') as f:
+    container = f.read().split('\n')
+  
+  for i in range(0,len(container)):
+    container[i] = container[i].split(',')
