@@ -1,0 +1,8 @@
+#read and separate file by \n and , 
+def read_file():
+  f = open('file.txt', 'r')
+  container = f.read().split('\n')
+  
+  for i in range(0,len(container)):
+    container[i] = container[i].split(',')
+ 
