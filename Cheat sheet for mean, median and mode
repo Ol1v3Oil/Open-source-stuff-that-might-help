@@ -1,12 +1,13 @@
-num = [[81,90],[91,100],[101,110],[111,120],[121,130],[131,140]]
+num = [[5,5],[6,6],[7,7],[8,8]]
 cb = []
-f = [19,19,14,15,20,13]
+f = [2,3,4,1]
 f2 = 0
 f3 = []
 cf_list = []
 x = []
 fx = []
 fx2 = 0
+
 
 for i in range(len(num)):
   hnum = 0
@@ -36,8 +37,11 @@ for i in range(len(f3)):
 mc = x.index(min(x, key=lambda y:abs(y-mean)))
 w = cb[0][1] - cb[0][0]
 
+median = ((f2/2 - cf_list[mc -1]) * w)/f[mc] + cb[mc][0]
+
 mc2 = f.index(max(f))
 
+mode = ((f[mc2] - f[mc2-1]) * w / ((f[mc2] - f[mc2-1])+(f[mc2] - f[mc2+1]))) + cb[mc2][0]
 
 print(f"num: {num}")
 print(f"f: {f}")
@@ -50,13 +54,15 @@ print(f"=====================")
 print(f"class boundaries: {cb}")
 print(f"cf list: {cf_list}")
 print(f"f: {f[mc]}")
-print(f"n/2: {f2}")
+print(f"n/2: {f2/2}")
 print(f"cf: {cf_list[mc -1]}")
 print(f"Lmd: {cb[mc][0]}")
 print(f"w: {w}")
+print(f"median: {median}")
 print(f"===================")
 print(f"L: {cb[mc2][0]}")
 print(f"fm: {f[mc2]}")
 print(f"fm-1: {f[mc2-1]}")
 print(f"fm+1: {f[mc2+1]}")
 print(f"I: {w}")
+print(f"mode: {mode}")
